@@ -1,0 +1,52 @@
+{
+  "name": "lyc-react-mobile-c",
+  "version": "0.1.0",
+  "description": "lyc's react mobile components",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --ext .tsx --ext .ts src/",
+    "compile": "set NODE_ENV=production&&babel src -d lib --extensions .ts,.tsx --ignore src/**/*.spec.js,src/**/*.test.js"
+  },
+  "keywords": [
+    "babel",
+    "react",
+    "mobile"
+  ],
+  "author": "lyc-chengzi",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "env-cmd": "^10.1.0",
+    "eslint": "6.x",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "4.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "2.x",
+    "gulp": "^4.0.2",
+    "husky": "^4.2.3",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
