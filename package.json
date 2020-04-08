@@ -1,12 +1,22 @@
 {
-  "name": "lyc-react-mobile-c",
-  "version": "0.1.0",
+  "name": "lyc-react-mobile",
+  "version": "0.1.2",
   "description": "lyc's react mobile components",
   "main": "lib/index.js",
+  "module": "es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyc-chengzi/lyc-react-mobile"
+  },
+  "homepage": "https://github.com/lyc-chengzi/lyc-react-mobile",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --ext .tsx --ext .ts src/",
-    "compile": "set NODE_ENV=production&&babel src -d lib --extensions .ts,.tsx --ignore src/**/*.spec.js,src/**/*.test.js"
+    "clear": "rimraf es lib dist",
+    "compile:lib": "env-cmd -e development,production babel --config-file ./.babelrc.lib.json src -d lib --extensions .ts,.tsx --ignore src/**/*.spec.js,src/**/*.test.js",
+    "compile:es": "env-cmd -e development,production babel --config-file ./.babelrc.es.json src -d es  --extensions .ts,.tsx --ignore ./src/**/*.spec.js,./src/**/*.test.js",
+    "compile:dist": "env-cmd -e development,production react-scripts build",
+    "build": "yarn clear&&yarn compile:lib&&yarn compile:es"
   },
   "keywords": [
     "babel",
@@ -24,6 +34,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
     "@types/react": "^16.9.32",
     "@types/react-dom": "^16.9.6",
@@ -41,11 +52,13 @@
     "eslint-plugin-react-hooks": "2.x",
     "gulp": "^4.0.2",
     "husky": "^4.2.3",
+    "rimraf": "^3.0.2",
     "typescript": "^3.8.3",
-    "webpack": "^4.42.1"
+    "webpack": "4.42.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
+    "core-js": "3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
