@@ -13,8 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --ext .tsx --ext .ts src/",
     "clear": "rimraf es lib dist",
-    "compile:lib": "env-cmd -e development,production babel --config-file ./.babelrc.lib.json src -d lib --extensions .ts,.tsx --ignore src/**/*.spec.js,src/**/*.test.js",
-    "compile:es": "env-cmd -e development,production babel --config-file ./.babelrc.es.json src -d es  --extensions .ts,.tsx --ignore ./src/**/*.spec.js,./src/**/*.test.js",
+    "compile:lib": "env-cmd -e development,production babel --config-file ./babelrc.lib.js src -d lib --extensions .ts,.tsx --ignore src/**/*.spec.js,src/**/*.test.js",
+    "compile:es": "env-cmd -e development,production babel --config-file ./babelrc.es.js src -d es  --extensions .ts,.tsx --ignore ./src/**/*.spec.js,./src/**/*.test.js",
     "compile:dist": "env-cmd -e development,production react-scripts build",
     "build": "yarn clear&&yarn compile:lib&&yarn compile:es"
   },
