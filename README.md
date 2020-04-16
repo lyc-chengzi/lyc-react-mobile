@@ -1,2 +1,2 @@
-# lyc-react-mobile-c
+# lyc-react-mobile
 mobile component with React
