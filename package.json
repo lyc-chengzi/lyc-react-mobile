@@ -1,6 +1,6 @@
 {
   "name": "lyc-react-mobile",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "lyc's react mobile components",
   "main": "lib/index.js",
   "module": "es/index.js",
